@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%= data %>
+
+    <h3>Mise à jour :</h3>
+    <form action="/updatecontact/<%= data._id %>?_method=PUT" method="post">
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" value="<%= data.nom %>">
+        <label for="prenom">Prénom</label>
+        <input type="text" name="prenom" value="<%= data.prenom %>">
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" value="<%= data.email %>">
+        <label for="message">Message</label>
+        <textarea name="message" id="message">
+            <%= data.message %>
+        </textarea>
+        <input type="submit">
+    </form>
+
+    <h3>Suppression de la donnée :</h3>
+
+    <form action="/deletecontact/<%= data._id%>?_method=DELETE" method="post">
+        <input type="submit" value="Supprimer la donnée">
+    </form>
+</body>
+</html>

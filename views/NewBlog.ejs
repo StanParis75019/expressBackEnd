@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/allposts">Tout les posts</a>
+        <a href="/ajoutblog">Ajouter un nouveau blog</a>
+    </nav>
+    <form action="/nouveaublog" method="post">
+        <label >Sujet</label>
+        <input type="text" name="sujet">
+        <label >Auteur</label>
+        <input type="text" name="auteur">
+        <label >Description</label>
+        <input type="text" name="description" id="description">
+        <label >Message</label>
+        <textarea name="message" id="message"></textarea>
+
+        <input type="submit">
+    </form>
+</body>
+</html>
